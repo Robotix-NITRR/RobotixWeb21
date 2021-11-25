@@ -82,7 +82,7 @@ s3transfer==0.4.1
 semantic-version==2.8.5
 simplejson==3.17.2
 six==1.14.0
-sqlparse==0.4.1
+sqlparse==0.4.2
 tablib==3.0.0
 termcolor==1.1.0
 texttable==1.6.3
