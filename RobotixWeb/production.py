@@ -45,7 +45,6 @@ INSTALLED_APPS = [
 
     # pips
     'corsheaders',
-    'django.contrib.sites',
     'rest_framework',
     'rest_framework.authtoken',
     'import_export',
@@ -178,7 +177,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-
 # drf
 
 REST_FRAMEWORK = {
@@ -250,9 +248,9 @@ ADMINS = (
     ('Robot', 'robot@nitrr.ac.in'),
 )
 
-#Amazon S3 Bucket settings
+# Amazon S3 Bucket settings
 
-USE_S3 = os.environ.get('USE_S3',default=False)
+USE_S3 = os.environ.get('USE_S3', default=False)
 
 if USE_S3:
     # aws settings
@@ -273,7 +271,7 @@ if USE_S3:
 else:
     DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
     MEDIA_URL = '/mediafiles/media/'
-    MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'mediafiles','media'))
+    MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'mediafiles', 'media'))
 
 STATIC_URL = '/staticfiles/static/'
-STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'staticfiles','static'))
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'staticfiles', 'static'))
