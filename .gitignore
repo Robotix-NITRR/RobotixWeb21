@@ -174,4 +174,3 @@ sketch
 # !.elasticbeanstalk/*.global.yml
 .bash_profile
 .bashrc
-docker/docker.app.env
