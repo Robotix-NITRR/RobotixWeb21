@@ -113,7 +113,7 @@ CORS_ORIGIN_WHITELIST = (
     'https://robotixnitrr.herokuapp.com',
     'https://robotix.nitrr.ac.in',
 )
-CORS_ALLOW_HEADERS = ['Set-Cookie']
+CORS_ALLOW_HEADERS = ['Set-Cookie', 'Content-Type', 'application/json']
 CORS_EXPOSE_HEADERS = ['Set-Cookie']
 
 # Database
