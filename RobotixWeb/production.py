@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # pips
     'corsheaders',
+    'django.contrib.sites',
     'rest_framework',
     'rest_framework.authtoken',
     'import_export',
@@ -198,7 +199,7 @@ LOGOUT_URL = 'rest_framework:logout'
 AUTH_USER_MODEL = 'users.CustomUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SITE_ID = 1
+SITE_ID = 2
 
 
 # email
