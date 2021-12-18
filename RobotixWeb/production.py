@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     # pips
     'corsheaders',
+    'django.contrib.sites',
     'rest_framework',
     'rest_framework.authtoken',
     'import_export',
@@ -112,7 +113,15 @@ CORS_ORIGIN_WHITELIST = (
     'https://robotixnitrr.herokuapp.com',
     'https://robotix.nitrr.ac.in',
 )
-CORS_ALLOW_HEADERS = ['Set-Cookie']
+CORS_ALLOW_HEADERS = ["accept",
+                      "accept-encoding",
+                      "authorization",
+                      "content-type",
+                      "dnt",
+                      "origin",
+                      "user-agent",
+                      "x-csrftoken",
+                      "x-requested-with", ]
 CORS_EXPOSE_HEADERS = ['Set-Cookie']
 
 # Database
@@ -198,7 +207,7 @@ LOGOUT_URL = 'rest_framework:logout'
 AUTH_USER_MODEL = 'users.CustomUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SITE_ID = 1
+SITE_ID = os.environ.get('SITE_ID', default=1)
 
 
 # email
