@@ -207,7 +207,7 @@ LOGOUT_URL = 'rest_framework:logout'
 AUTH_USER_MODEL = 'users.CustomUser'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SITE_ID = os.environ.get('SITE_ID', default=1)
+SITE_ID = int(os.environ.get('SITE_ID', default=1))
 
 
 # email
