@@ -13,7 +13,7 @@ urlpatterns = [
     path('alumini/', Alumini.as_view(), name='text'),
     path('verify/', VerifyEmail.as_view(), name='text'),
     path('', include(router.urls), name='about_api'),
-    path('moveTeams', MoveTeams.as_view(), name='move'),
+    path('moveTeams/', MoveTeams.as_view(), name='move'),
     path('updateTeam/<int:id>/', generics.UpdateAPIView.as_view(queryset=Team.objects.all(),
                                                                 serializer_class=TeamSerializer, lookup_field='id'), name='team-update')
 ]
