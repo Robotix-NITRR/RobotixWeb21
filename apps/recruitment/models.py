@@ -1,3 +1,4 @@
+from array import ArrayType
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
@@ -65,6 +66,14 @@ class SubmittedUser(models.Model):
 
     def __str__(self):
         return self.candidate_name
+
+
+'''
+class FormResponses(models.Model):
+    submitted_candidate_id = models.ForeignKey(
+        SubmittedUser, on_delete=models.CASCADE, null=True)
+    submissions = ArrayField()
+'''
 
 
 class FormResponses(models.Model):

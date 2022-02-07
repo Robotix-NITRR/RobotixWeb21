@@ -175,3 +175,5 @@ sketch
 .bash_profile
 .bashrc
 2021-old-Team.csv
+backup.json
+.gitignore
