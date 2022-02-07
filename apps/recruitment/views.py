@@ -96,16 +96,18 @@ class FormResponsesApi(APIView):
     def post(self, request):
         started = Recruitment.objects.all()[0].is_started
         if started:
-            if self.request.data.__contains__("Name") and self.request.data.__contains__("ID") and self.request.data.__contains__("Mobile") and self.request.data.__contains__("Email") and self.request.data.__contains__("Domain") and self.request.data.__contains__("Question"):
+            if self.request.data.__contains__("Name") and self.request.data.__contains__("ID") and self.request.data.__contains__("Mobile") and self.request.data.__contains__("Email") and self.request.data.__contains__("Domain") and self.request.data.__contains__("Question") and self.request.data.__contains__("Branch") and self.request.data.__contains__("Year"):
                 name = self.request.data["Name"]
                 response_id = self.request.data["ID"]
                 mobile = self.request.data["Mobile"]
                 email = self.request.data["Email"]
                 domain = self.request.data["Domain"]
                 question = self.request.data["Question"]
+                branch = self.request.data["Branch"]
+                year = self.request.data["Year"]
 
                 candidate = SubmittedUser.objects.create(
-                    candidate_name=name, candidate_id=response_id, candidate_mobile_number=mobile, candidate_emailid=email, candidate_domain_choices=domain)
+                    candidate_name=name, candidate_id=response_id, candidate_mobile_number=mobile, candidate_emailid=email, candidate_domain_choices=domain, candidate_studying_year=year, candidate_branch=branch)
                 candidate.save()
                 if question["All"]:
                     question_ = question["All"]
