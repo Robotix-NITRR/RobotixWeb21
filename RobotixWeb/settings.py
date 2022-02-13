@@ -4,7 +4,7 @@ from .production import *
 import os
 
 ALLOWED_HOSTS.append('.herokuapp.com')
-
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 if os.environ.get('DEBUG'):
     DEBUG = True
