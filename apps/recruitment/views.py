@@ -39,7 +39,7 @@ class RetrieveResponseApi(APIView):
                 form_responses = FormResponses.objects.filter(
                     submitted_candidate_id=submission.candidate_id)
                 submission_body = {}
-                submission_body['ID'] = submission.candidate_id
+                submission_body['id'] = submission.candidate_id
                 submission_body['Name'] = submission.candidate_name
                 submission_body['Mobile No.'] = submission.candidate_mobile_number
                 submission_body['Email ID'] = submission.candidate_emailid
