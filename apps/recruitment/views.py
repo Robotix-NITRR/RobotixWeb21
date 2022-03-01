@@ -51,9 +51,9 @@ class RetrieveResponseApi(APIView):
                 for form_response in form_responses:
                     res = {}
                     res['Question'] = form_response.question_id.question
-                    res['Question Type'] = form_response.question_id.question_type
-                    res['Question Domain'] = form_response.question_id.question_for_domain
-                    res['Answer Given'] = form_response.answer_given
+                    res['Question_Type'] = form_response.question_id.question_type
+                    res['Question_Domain'] = form_response.question_id.question_for_domain
+                    res['Answer_Given'] = form_response.answer_given
                     qna.append(res)
                 submission_body['QnA'] = qna
                 response_body.append(submission_body)
